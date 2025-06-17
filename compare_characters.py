@@ -11,7 +11,9 @@ def compare_characters(char1, char2):
     else:
         return ord(char2)
 
+#Test cases for the compare_characters function
 class TestCompareCharacters:
+    # This class contains test cases for the compare_characters function.
     def run_tests(self):
         print("Running test cases for compare_characters...\n")
         # Test 1: char1 > char2
