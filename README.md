@@ -1,30 +1,66 @@
-# june25
-Python is simple to understand and build code with minimum writing
-It is preferred language for Data analysis using different modules it provides
+# Python Programs Collection
 
-# math_operations.py
+This repository contains a collection of simple Python programs for basic mathematical and logical operations, along with corresponding test cases.
 
-def add(a, b):
-    return a + b
+## List of Programs
 
-def subtract(a, b):
-    return a - b
+### 1. `math_operations.py`
+Performs addition, subtraction, multiplication, and division on two numbers.  
+Includes a test class with 100 diverse test datasets.
 
-def multiply(a, b):
-    return a * b
+### 2. `string_concatenate.py`
+Concatenates two input strings and displays the result.
 
-def divide(a, b):
-    if b == 0:
-        raise ValueError("Cannot divide by zero.")
-    return a / b
+### 3. `prime_check.py`
+Checks if a given number is prime using an efficient method.  
+Includes a test class covering various edge cases and scenarios.
 
-if __name__ == "__main__":
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+### 4. `mcm_lcm.py`
+Calculates the GCD (MCD) and LCM of two given numbers.
 
-    print(f"Addition: {add(num1, num2)}")
-    print(f"Subtraction: {subtract(num1, num2)}")
-    print(f"Multiplication: {multiply(num1, num2)}")
-    try:
-        print(f"Division: {divide(num1, num2)}")
-    except ValueError
+### 5. `fibonacci_series.py`
+Generates the Fibonacci series up to a user-specified number of terms.  
+Includes a test class to verify correctness for various input cases.
+
+### 6. `roots_calculator.py`
+Calculates the square root and cube root of a single number or a sequence of numbers entered by the user.
+
+### 7. `compare_characters.py`
+Compares two characters and displays the numerical (Unicode) value of the larger character.  
+Includes a test class for validation.
+
+---
+
+## How to Run
+
+1. **Clone the repository** or download the files.
+2. **Navigate to the project directory** in your terminal:
+   ```
+   cd c:\codes\june25
+   ```
+3. **Run any program** using Python:
+   ```
+   python filename.py
+   ```
+   Replace `filename.py` with the desired script name.
+
+---
+
+## Testing
+
+Some scripts include built-in test classes.  
+To run tests, simply execute the script; tests will run before user input is requested.
+
+---
+
+## Requirements
+
+- Python 3.x
+
+No external libraries are required.
+
+---
+
+## Author
+
+Created as a collection of beginner-friendly Python programs
