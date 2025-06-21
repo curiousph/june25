@@ -33,6 +33,10 @@ Includes a test class for validation.
 Implements binary search on a sorted list without using any built-in search libraries.  
 Includes a test class with multiple test cases for different scenarios (target present, absent, edge cases, duplicates, etc.).
 
+### 9. `parentheses_validator.py`
+Checks if a string contains a valid sequence of parentheses (supports (), {}, []).  
+Includes a test class with multiple test cases for valid and invalid scenarios.
+
 ---
 
 ## How to Run
