@@ -29,6 +29,10 @@ Calculates the square root and cube root of a single number or a sequence of num
 Compares two characters and displays the numerical (Unicode) value of the larger character.  
 Includes a test class for validation.
 
+### 8. `binary_search.py`
+Implements binary search on a sorted list without using any built-in search libraries.  
+Includes a test class with multiple test cases for different scenarios (target present, absent, edge cases, duplicates, etc.).
+
 ---
 
 ## How to Run
