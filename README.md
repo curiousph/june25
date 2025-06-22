@@ -30,12 +30,16 @@ Compares two characters and displays the numerical (Unicode) value of the larger
 Includes a test class for validation.
 
 ### 8. `binary_search.py`
-Implements binary search on a sorted list without using any built-in search libraries.  
-Includes a test class with multiple test cases for different scenarios (target present, absent, edge cases, duplicates, etc.).
+Implements binary search on a sorted list without using built-in libraries.  
+Prints intermediate steps for clarity and includes comprehensive test cases.
 
 ### 9. `parentheses_validator.py`
-Checks if a string contains a valid sequence of parentheses (supports (), {}, []).  
-Includes a test class with multiple test cases for valid and invalid scenarios.
+Validates whether a sequence of parentheses is balanced.  
+Includes detailed inline comments and a test class for various scenarios.
+
+### 10. `count_case_letters.py`
+Counts the number of uppercase and lowercase letters in a given string.  
+Displays the counts to the user.
 
 ---
 
