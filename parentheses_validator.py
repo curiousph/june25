@@ -1,18 +1,25 @@
+# Program: Parentheses Validator
+# Description: Checks if a string contains a valid sequence of parentheses (supports (), {}, []).
+# Includes a test class with multiple test cases for valid and invalid scenarios.
+# Author: GitHub Copilot
+# Date: June 22, 2025
+
 def is_valid_parentheses(s):
     """
     Checks if the input string 's' has valid parentheses sequence.
     Supports (), {}, []. Returns True if valid, False otherwise.
     """
-    stack = []
-    mapping = {')': '(', '}': '{', ']': '['}
+    stack = []  # Stack to keep track of opening brackets
+    mapping = {')': '(', '}': '{', ']': '['}  # Mapping of closing to opening brackets
     for char in s:
-        if char in mapping.values():
+        if char in mapping.values():  # If it's an opening bracket
             stack.append(char)
-        elif char in mapping:
+        elif char in mapping:  # If it's a closing bracket
+            # If stack is empty or top of stack doesn't match
             if not stack or stack[-1] != mapping[char]:
                 return False
-            stack.pop()
-    return not stack
+            stack.pop()  # Pop the matching opening bracket
+    return not stack  # If stack is empty, all brackets matched
 
 class TestParenthesesValidation:
     def run_tests(self):
