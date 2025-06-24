@@ -41,6 +41,9 @@ Includes detailed inline comments and a test class for various scenarios.
 Counts the number of uppercase and lowercase letters in a given string.  
 Displays the counts to the user.
 
+### 11. `string_compare.py`
+Compares two input strings and prints `True` if they match, otherwise `False`.
+
 ---
 
 ## How to Run
