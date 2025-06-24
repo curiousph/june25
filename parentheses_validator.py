@@ -6,64 +6,55 @@
 
 def is_valid_parentheses(s):
     """
-    Checks if the input string 's' has valid parentheses sequence.
-    Supports (), {}, []. Returns True if valid, False otherwise.
+    Returns True if the parentheses in the string are balanced, False otherwise.
+    Ignores all non-parenthesis characters.
     """
-    stack = []  # Stack to keep track of opening brackets
-    mapping = {')': '(', '}': '{', ']': '['}  # Mapping of closing to opening brackets
+    stack = []
+    pairs = {')': '(', ']': '[', '}': '{'}
     for char in s:
-        if char in mapping.values():  # If it's an opening bracket
+        if char in '([{':
             stack.append(char)
-        elif char in mapping:  # If it's a closing bracket
-            # If stack is empty or top of stack doesn't match
-            if not stack or stack[-1] != mapping[char]:
+        elif char in ')]}':
+            if not stack or stack[-1] != pairs[char]:
                 return False
-            stack.pop()  # Pop the matching opening bracket
-    return not stack  # If stack is empty, all brackets matched
+            stack.pop()
+    return not stack
 
-class TestParenthesesValidation:
+class TestParenthesesValidator:
+    """
+    Test class for is_valid_parentheses function.
+    Includes simple and complex test cases with alphanumeric and special characters.
+    """
     def run_tests(self):
-        print("Running parentheses validation test cases...\n")
-        # Test 1: Simple valid
+        print("Running parentheses validator test cases...\n")
+        # Simple balanced cases
         assert is_valid_parentheses("()") == True, "Test 1 Failed"
-        print("Test 1 Passed: ()")
-        # Test 2: Nested valid
         assert is_valid_parentheses("([])") == True, "Test 2 Failed"
-        print("Test 2 Passed: ([])")
-        # Test 3: Multiple types valid
-        assert is_valid_parentheses("{[()]}[]") == True, "Test 3 Failed"
-        print("Test 3 Passed: {[()]}[]")
-        # Test 4: Invalid order
-        assert is_valid_parentheses("(]") == False, "Test 4 Failed"
-        print("Test 4 Passed: (]")
-        # Test 5: Unmatched open
-        assert is_valid_parentheses("((") == False, "Test 5 Failed"
-        print("Test 5 Passed: ((")
-        # Test 6: Unmatched close
-        assert is_valid_parentheses(")(") == False, "Test 6 Failed"
-        print("Test 6 Passed: )(")
-        # Test 7: Empty string
-        assert is_valid_parentheses("") == True, "Test 7 Failed"
-        print("Test 7 Passed: Empty string")
-        # Test 8: Complex valid
-        assert is_valid_parentheses("{[()()[]]}([])") == True, "Test 8 Failed"
-        print("Test 8 Passed: {[()()[]]}([])")
-        # Test 9: Complex invalid
-        assert is_valid_parentheses("{[(])}") == False, "Test 9 Failed"
-        print("Test 9 Passed: {[(])}")
-        # Test 10: Only open/close
-        assert is_valid_parentheses("((((((((((" ) == False, "Test 10 Failed"
-        print("Test 10 Passed: ((((((((((")
-        print("\nAll test cases passed.")
+        assert is_valid_parentheses("{[()]}") == True, "Test 3 Failed"
+        # Simple unbalanced cases
+        assert is_valid_parentheses("(") == False, "Test 4 Failed"
+        assert is_valid_parentheses("([)]") == False, "Test 5 Failed"
+        assert is_valid_parentheses("{[(])}") == False, "Test 6 Failed"
+        # Complex with alphanumeric and symbols
+        assert is_valid_parentheses("a+(b*[c-{d/e}])") == True, "Test 7 Failed"
+        assert is_valid_parentheses("if (x > 0) { return [y]; } else { return (z); }") == True, "Test 8 Failed"
+        assert is_valid_parentheses("function(a, b[2]) { return (a+b); }") == True, "Test 9 Failed"
+        assert is_valid_parentheses("a+(b*[c-{d/e}]") == False, "Test 10 Failed"
+        assert is_valid_parentheses("abc123") == True, "Test 11 Failed"  # No parentheses, considered balanced
+        assert is_valid_parentheses("([a+b]*{c/d})") == True, "Test 12 Failed"
+        assert is_valid_parentheses("([a+b]*{c/d}") == False, "Test 13 Failed"
+        assert is_valid_parentheses(")(") == False, "Test 14 Failed"
+        assert is_valid_parentheses("a(b)c)d(") == False, "Test 15 Failed"
+        print("All test cases passed.\n")
 
 if __name__ == "__main__":
     # Run tests
-    tester = TestParenthesesValidation()
+    tester = TestParenthesesValidator()
     tester.run_tests()
 
-    # User input
-    s = input("\nEnter a string of parentheses to validate: ")
-    if is_valid_parentheses(s):
-        print("The sequence is valid.")
+    # User input for validation
+    user_input = input("Enter a string to validate parentheses: ")
+    if is_valid_parentheses(user_input):
+        print("Parentheses are balanced.")
     else:
-        print("The sequence is NOT valid.")
+        print("Parentheses are NOT balanced.")
