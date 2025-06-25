@@ -35,7 +35,7 @@ Prints intermediate steps for clarity and includes comprehensive test cases.
 
 ### 9. `parentheses_validator.py`
 Validates whether a sequence of parentheses is balanced.  
-Includes detailed inline comments and a test class for various scenarios.
+Handles alphanumeric and special characters, includes detailed inline comments and a test class for various scenarios.
 
 ### 10. `count_case_letters.py`
 Counts the number of uppercase and lowercase letters in a given string.  
@@ -43,6 +43,9 @@ Displays the counts to the user.
 
 ### 11. `string_compare.py`
 Compares two input strings and prints `True` if they match, otherwise `False`.
+
+### 12. `magic_triangle.py`
+Checks if a given 3x3 triangle (input as three rows of three numbers) is a "magic triangle"—that is, if the sum of the numbers on each side is equal.
 
 ---
 
@@ -78,4 +81,4 @@ No external libraries are required.
 
 ## Author
 
-Created as a collection of beginner-friendly Python programs
+Created as a collection of beginner-friendly Python programs with test
