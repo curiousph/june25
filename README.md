@@ -47,6 +47,9 @@ Compares two input strings and prints `True` if they match, otherwise `False`.
 ### 12. `magic_triangle.py`
 Checks if a given 3x3 triangle (input as three rows of three numbers) is a "magic triangle"—that is, if the sum of the numbers on each side is equal.
 
+### 13. `count_characters.py`
+Counts the number of characters in a string input by the user.
+
 ---
 
 ## How to Run
