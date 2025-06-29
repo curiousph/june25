@@ -9,16 +9,16 @@ def is_valid_parentheses(s):
     Returns True if the parentheses in the string are balanced, False otherwise.
     Ignores all non-parenthesis characters.
     """
-    stack = []
-    pairs = {')': '(', ']': '[', '}': '{'}
+    stack = []  # Stack to keep track of opening brackets
+    pairs = {')': '(', ']': '[', '}': '{'}  # Mapping of closing to opening brackets
     for char in s:
-        if char in '([{':
+        if char in '([{':  # If it's an opening bracket, push to stack
             stack.append(char)
-        elif char in ')]}':
-            if not stack or stack[-1] != pairs[char]:
+        elif char in ')]}':  # If it's a closing bracket
+            if not stack or stack[-1] != pairs[char]:  # Stack empty or top doesn't match
                 return False
-            stack.pop()
-    return not stack
+            stack.pop()  # Pop the matching opening bracket
+    return not stack  # If stack is empty, parentheses are balanced
 
 class TestParenthesesValidator:
     """
