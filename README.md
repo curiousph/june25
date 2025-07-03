@@ -50,6 +50,14 @@ Checks if a given 3x3 triangle (input as three rows of three numbers) is a "magi
 ### 13. `count_characters.py`
 Counts the number of characters in a string input by the user.
 
+### 14. `string_to_number.py`
+Converts a given string to a number (integer or float) if possible. Displays the converted value and its type, or an error if conversion fails.
+
+### 15. `streamlitapp.py`
+A Streamlit web application with two main features:
+- Takes user input and displays it on the screen.
+- Provides a calculator for two numbers, showing addition, subtraction, multiplication, and division results on a button click.
+
 ---
 
 ## How to Run
