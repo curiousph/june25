@@ -1,6 +1,7 @@
 # This program checks if a binary tree is height-balanced.
 # A binary tree is balanced if the heights of the two child subtrees of any node differ by no more than one.
-
+# # The program defines a TreeNode class for the binary tree nodes and a function to check if the tree is balanced.
+# It includes test cases to validate the functionality.
 class TreeNode:
     """Node class for a binary tree."""
     def __init__(self, val=0, left=None, right=None):
