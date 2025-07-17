@@ -1,12 +1,12 @@
 # This program returns the preorder traversal of a binary tree's nodes' values.
-
+# This is a depth-first traversal method.
 class TreeNode:
     """Definition for a binary tree node."""
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-
+# 
 def preorder_traversal(root):
     """
     Returns a list of values representing the preorder traversal of the binary tree.
